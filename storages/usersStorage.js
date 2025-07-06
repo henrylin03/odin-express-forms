@@ -1,5 +1,4 @@
 // this class simulates interacting with db
-
 class UsersStorage {
   constructor() {
     this.storage = {};
