@@ -1,7 +1,7 @@
-<!-- views/createUser.ejs -->
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/styles.css" />
     <title><%= title %></title>
   </head>
   <body>
@@ -10,11 +10,17 @@
     <%- include("partials/errors.ejs") %>
 
     <form action="/create" method="POST">
-      <label for="firstName">First Name: </label>
-      <input type="text" name="firstName" id="firstName" required />
-      <label for="lastName">Last Name: </label>
-      <input type="text" name="lastName" id="lastName" required />
-      <button type="submit">Submit</button>
+      <ul>
+        <li class="create-user-form-field">
+          <label for="firstName">First Name: </label>
+          <input type="text" name="firstName" id="firstName" required />
+        </li>
+        <li class="create-user-form-field">
+          <label for="lastName">Last Name: </label>
+          <input type="text" name="lastName" id="lastName" required />
+        </li>
+        <li><button type="submit">Submit</button></li>
+      </ul>
     </form>
     <a href="/">Back to home</a>
   </body>

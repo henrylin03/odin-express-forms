@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 2rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* typography */
+a {
+  font-weight: 700;
+}
+
+/* other ui elements */
+button {
+  font-size: 1rem;
+  padding: 0.2rem 0.75rem;
+  font-weight: 700;
+}
+
+input {
+  font-size: 1rem;
+}
+
+/* page-specific styling */
+form ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: none;
+}
+
+.user-list {
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.create-user-form-field {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  place-self: center;
+  gap: 0.5rem;
+}
+
+.update-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
