@@ -3,6 +3,7 @@ const usersStorage = require("../storages/usersStorage");
 
 const alphaErr = "must only contain letters.";
 const lengthErr = "must be between 1 and 10 characters";
+const emailErr = "must be a valid email address";
 
 const validateUser = [
   body("firstName")
@@ -18,6 +19,8 @@ const validateUser = [
     .withMessage(`Last name ${alphaErr}`)
     .isLength({ min: 1, max: 10 })
     .withMessage(`Last name ${lengthErr}`),
+
+  body("email").trim().isEmail().withMessage(`Email ${emailErr}`),
 ];
 
 exports.usersListGet = (_req, res) => {
@@ -43,8 +46,8 @@ exports.usersCreatePost = [
         .status(400)
         .render("createUser", { title: "Create user", errors: errors.array() });
 
-    const { firstName, lastName } = req.body;
-    usersStorage.addUser({ firstName, lastName });
+    const { firstName, lastName, email } = req.body;
+    usersStorage.addUser({ firstName, lastName, email });
     res.redirect("/");
   },
 ];
@@ -67,8 +70,8 @@ exports.usersUpdatePost = [
         errors: errors.array(),
       });
 
-    const { firstName, lastName } = req.body;
-    usersStorage.updateUser(req.params.id, { firstName, lastName });
+    const { firstName, lastName, email } = req.body;
+    usersStorage.updateUser(req.params.id, { firstName, lastName, email });
     res.redirect("/");
   },
 ];
