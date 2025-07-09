@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="/styles.css" />
     <title><%= title %></title>
   </head>
   <body>
     <h1><%= title %></h1>
     <%- include("partials/errors.ejs") %>
-    <form action="/<%= user.id %>/update" method="POST">
-      <input
-        type="text"
-        name="firstName"
-        value="<%= user.firstName %>"
-        required
-      />
-      <input
-        type="text"
-        name="lastName"
-        value="<%= user.lastName %>"
-        required
-      />
-      <button type="submit">Update User</button>
+    <form action="/<%= user.id %>/update" method="POST" class="update-form">
+      <ul>
+        <li>
+          <input
+            type="text"
+            name="firstName"
+            value="<%= user.firstName %>"
+            required
+          />
+        </li>
+        <li>
+          <input
+            type="text"
+            name="lastName"
+            value="<%= user.lastName %>"
+            required
+          />
+        </li>
+        <li>
+          <button type="submit">Update User</button>
+        </li>
+      </ul>
     </form>
 
     <a href="/">Back to home</a>
