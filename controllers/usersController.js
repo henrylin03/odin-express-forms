@@ -43,8 +43,8 @@ exports.usersCreatePost = [
         .status(400)
         .render("createUser", { title: "Create user", errors: errors.array() });
 
-    const { firstName, lastName } = req.body;
-    usersStorage.addUser({ firstName, lastName });
+    const { firstName, lastName, email } = req.body;
+    usersStorage.addUser({ firstName, lastName, email });
     res.redirect("/");
   },
 ];
@@ -67,8 +67,8 @@ exports.usersUpdatePost = [
         errors: errors.array(),
       });
 
-    const { firstName, lastName } = req.body;
-    usersStorage.updateUser(req.params.id, { firstName, lastName });
+    const { firstName, lastName, email } = req.body;
+    usersStorage.updateUser(req.params.id, { firstName, lastName, email });
     res.redirect("/");
   },
 ];
