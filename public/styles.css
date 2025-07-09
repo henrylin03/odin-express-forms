@@ -64,3 +64,8 @@ form ul {
   align-items: center;
   gap: 0.5rem;
 }
+
+.update-form button,
+.create-form button {
+  margin-top: 0.75rem;
+}
