@@ -29,6 +29,15 @@
           <input type="text" name="email" value="<%= user.email %>" required />
         </li>
         <li>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            value="<%=user.age%>"
+            min="0"
+          />
+        </li>
+        <li>
           <button type="submit">Update User</button>
         </li>
       </ul>
