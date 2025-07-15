@@ -27,8 +27,15 @@ button {
   font-weight: 700;
 }
 
-input {
-  font-size: 1rem;
+input,
+textarea {
+  font-size: inherit;
+  width: 15rem;
+  padding: 0.25rem;
+}
+
+textarea {
+  resize: none;
 }
 
 /* page-specific styling */
@@ -39,12 +46,21 @@ form ul {
   list-style-type: none;
 }
 
-.user-list {
+.user-list,
+.error-list {
   margin-left: 1.5rem;
+}
+
+.error-list {
+  color: hsl(0, 80%, 45%);
+}
+
+.user-list {
   display: flex;
   align-items: center;
   gap: 5rem;
 }
+
 .actions {
   display: flex;
   align-items: center;
@@ -52,6 +68,7 @@ form ul {
 }
 
 .create-user-form-field {
+  width: 100%;
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   place-self: center;
@@ -62,4 +79,9 @@ form ul {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.update-form button,
+.create-form button {
+  margin-top: 0.75rem;
 }

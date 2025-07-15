@@ -15,6 +15,7 @@
             name="firstName"
             value="<%= user.firstName %>"
             required
+            placeholder="First name"
           />
         </li>
         <li>
@@ -23,7 +24,39 @@
             name="lastName"
             value="<%= user.lastName %>"
             required
+            placeholder="Last name"
           />
+        </li>
+        <li>
+          <input
+            type="text"
+            name="email"
+            value="<%= user.email %>"
+            required
+            placeholder="Email address"
+          />
+        </li>
+        <li>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            value="<%=user.age%>"
+            min="0"
+            placeholder="Age"
+          />
+        </li>
+        <li>
+          <textarea
+            name="bio"
+            id="bio"
+            maxlength="200"
+            wrap="soft"
+            rows="8"
+            placeholder="Bio (optional)"
+          >
+<%=user.bio%></textarea
+          >
         </li>
         <li>
           <button type="submit">Update User</button>
