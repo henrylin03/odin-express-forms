@@ -15,18 +15,33 @@
           <label for="firstName">First Name: </label>
           <input type="text" name="firstName" id="firstName" required />
         </li>
+
         <li class="create-user-form-field">
           <label for="lastName">Last Name: </label>
           <input type="text" name="lastName" id="lastName" required />
         </li>
+
         <li class="create-user-form-field">
           <label for="email">Email:</label
           ><input type="text" name="email" id="email" required />
         </li>
+
         <li class="create-user-form-field">
           <label for="age">Age (Optional):</label>
           <input type="number" name="age" id="age" min="0" />
         </li>
+
+        <li class="create-user-form-field">
+          <label for="bio">Bio (Optional):</label>
+          <textarea
+            name="bio"
+            id="bio"
+            maxlength="200"
+            wrap="soft"
+            rows="8"
+          ></textarea>
+        </li>
+
         <li><button type="submit">Submit</button></li>
       </ul>
     </form>
