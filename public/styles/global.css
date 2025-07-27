@@ -56,7 +56,7 @@ form ul {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .actions {
@@ -88,6 +88,7 @@ form ul {
   border: 1px solid hsl(0, 0%, 75%);
   padding: 2rem;
   min-height: 15rem;
+  min-width: 15rem;
   display: flex;
   flex-direction: column;
 }
@@ -95,4 +96,8 @@ form ul {
 .userProperties {
   list-style-type: none;
   flex: 1;
+}
+
+.no-search-results-message {
+  color: hsl(0, 0%, 50%);
 }

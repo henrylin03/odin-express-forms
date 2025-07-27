@@ -100,3 +100,14 @@ exports.usersDeletePost = (req, res) => {
   usersStorage.deleteUser(req.params.id);
   res.redirect("/");
 };
+
+exports.usersSearchGet = (req, res) => {
+  const searchInput = req.query["search-input"];
+  if (!searchInput || !searchInput.trim()) return res.redirect("/");
+
+  console.log("resultList:", usersStorage.searchUsers(searchInput));
+
+  res.render("search", {
+    resultList: usersStorage.searchUsers(searchInput),
+  });
+};

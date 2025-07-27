@@ -26,6 +26,20 @@ class UsersStorage {
   deleteUser(id) {
     delete this.storage[id];
   }
+
+  searchUsers(searchInput) {
+    const cleanedSearchInput = searchInput.trim().toLowerCase();
+    if (!cleanedSearchInput) return [];
+
+    const allUsersArray = Object.values(this.storage);
+
+    return allUsersArray.filter(
+      (user) =>
+        user.firstName.toLowerCase().includes(cleanedSearchInput) ||
+        user.lastName.toLowerCase().includes(cleanedSearchInput) ||
+        user.email.toLowerCase().includes(cleanedSearchInput),
+    );
+  }
 }
 
 // export _instance_ of class rather than exporting the class

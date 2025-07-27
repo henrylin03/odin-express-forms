@@ -6,8 +6,13 @@
 </head>
 <body>
   <h1><%= title %></h1>
+  <form method="GET" action="/search">
+    <input placeholder="Search for users" name="search-input" />
+    <button type="submit">Search</button>
+  </form>
+
   <ul class="user-list">
-    <% if (locals.users) {%>
+    <% if (users) {%>
       <% users.forEach(user => { %>
         <%- include("partials/user", { user: user}) %>
       <% }); %>
