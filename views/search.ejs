@@ -8,7 +8,7 @@
   </head>
   <body>
     <% if (!resultList || resultList.length === 0) {%>
-        <p>No users found</p>
+        <p class="no-search-results-message">No users found :(</p>
     <%} else { %>
     <ul class="results">
         <% resultList.forEach(user => { %>
