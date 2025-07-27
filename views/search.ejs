@@ -7,8 +7,12 @@
     <title>User search</title>
   </head>
   <body>
+    <% if (resultList.length === 0) {%>
+        <p>No users found</p><%} %>
+
     <ul class="results">
-      <%= locals.resultList %>
     </ul>
+
+    <a href="/">Back to home</a>
   </body>
 </html>
