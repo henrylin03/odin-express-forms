@@ -102,11 +102,10 @@ exports.usersDeletePost = (req, res) => {
 };
 
 exports.usersSearchGet = (req, res) => {
-  res.render("search", {
-    resultList: usersStorage.searchInput("asdf"),
-  });
+  const searchInput = req.query["search-input"];
+  if (!searchInput || !searchInput.trim()) return res.redirect("/");
 
-  console.log("Params:", req.params);
-  console.log("Query:", req.query);
-  res.redirect("/");
+  res.render("search", {
+    resultList: usersStorage.searchUsers(searchInput),
+  });
 };
