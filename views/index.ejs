@@ -15,7 +15,7 @@
   <ul class="user-list">
     <% if (users) {%>
     <% users.forEach(user => { %>
-    <li class="added-user">ID: <%= user.id %>, Name: <%= user.firstName %> <%= user.lastName %>, Email: <%=user.email%><% if (user.age) { %>, Age: <%=user.age%><% } %><% if (user.bio) { %>, Bio: <%=user.bio%><% } %></li>
+    <li>ID: <%= user.id %>, Name: <%= user.firstName %> <%= user.lastName %>, Email: <%=user.email%><% if (user.age) { %>, Age: <%=user.age%><% } %><% if (user.bio) { %>, Bio: <%=user.bio%><% } %></li>
 
     <div class="actions">
       <a href="/<%=user.id%>/update">Update</a>
