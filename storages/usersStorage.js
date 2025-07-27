@@ -29,7 +29,7 @@ class UsersStorage {
 
   searchUsers(searchInput) {
     const cleanedSearchInput = searchInput.trim().toLowerCase();
-    if (!cleanedSearchInput) return;
+    if (!cleanedSearchInput) return [];
 
     const allUsersArray = Object.values(this.storage);
 

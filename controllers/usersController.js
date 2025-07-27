@@ -102,8 +102,11 @@ exports.usersDeletePost = (req, res) => {
 };
 
 exports.usersSearchGet = (req, res) => {
+  res.render("search", {
+    resultList: usersStorage.searchInput("asdf"),
+  });
+
   console.log("Params:", req.params);
   console.log("Query:", req.query);
-  usersStorage.searchInput("asdf");
   res.redirect("/");
 };
