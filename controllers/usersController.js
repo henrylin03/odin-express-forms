@@ -100,3 +100,10 @@ exports.usersDeletePost = (req, res) => {
   usersStorage.deleteUser(req.params.id);
   res.redirect("/");
 };
+
+exports.usersSearchGet = (req, res) => {
+  console.log("Params:", req.params);
+  console.log("Query:", req.query);
+  usersStorage.searchInput("asdf");
+  res.redirect("/");
+};
